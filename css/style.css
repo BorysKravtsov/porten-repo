@@ -114,7 +114,7 @@
         white-space: pre;
     }
     .main{
-        background-image: url('https://github.com/BorysKravtsov/porten-repo/blob/main/images/title-bg.jpg?raw=true');
+        background-image: url('/images/title-bg.jpg');
         min-height:calc(100vh - 124px);
         background-repeat: no-repeat;
         background-position: center center;
