@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
     <header class="header">
         <div class="container">
             <div class="header__contact-log">
@@ -33,7 +31,7 @@
                     <a class="logo" href="#">
                         <img src="images/logo.svg" alt="logo">
                     </a>
-                    <button class="hamburger" aria-label="Открыть меню">☰</button>
+                    
                     <nav class="nav">
                         <ul class="nav__menu">
                             <li>сподобалось</li>
@@ -47,6 +45,7 @@
                             <img src="images/search.svg" alt="search">
                         </a>
                     </nav>
+                    <button class="hamburger" aria-label="Открыть меню">☰</button>
                 </div>
                 
             </div>  
@@ -144,8 +143,8 @@
                                 65 000 грн.                            
                             </div>
                         </div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <!-- <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div> -->
                     </div>
                 </div>
             
@@ -370,8 +369,8 @@
                                     </button>
                                 </div>    
                             </div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                            <!-- <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div> -->
                         </div>
                         
                     
@@ -379,83 +378,97 @@
             </div>
         </div>
     </section>
-    <!--
+    
     <section class="articles">
-        <h2 class="title">
-            Статті та корисна інформація
-        </h2>
-        <hr>
+        <div class="title-container">
+            <h2 class="title">
+                Статті та корисна інформація
+            </h2>
+            <hr>
+        </div>
         
+        <div class="articles__container">
             <div class="articles__item">
-                <img src="images/articles/1.jpg" alt="master">
-                <div class="articles__info-container">
+                <img src="/images/articles/1.jpg" alt="master">
+                <div class="articles__text-block">
                     <h5 class="articles__title">
                         ROGER DUBUIS. ЧАСТИНА 1
                     </h5>
-                    <div class="articles__text">
+                    <p class="articles__text">
                         Цей чемпіон «гіперхорології» став синонімом надмірності й завдяки своїй радикальній скелетонізованій архітектурі неодноразово демонструє пристрасть до годинного вуайєризму. У цій серії з чотирьох статей описується нещодавня подорож на мануфактуру, де можна було спостерігати за виготовленням та оздобленням деталей, а також за збіркою та регулюванням годинників компанії.
-                    </div>
-                    <div class="articles__activities">
+                    </p>
+                    <div class="articles__active">
                         <button class="articles__btn">
                             читати
                         </button>
                         <span class="articles__hashtag">#ЕКСКЛЮЗИВ  #ПРОБРЕНД</span>
                     </div>
-                </div>  
+                    
+                </div>
             </div>
-        
-        
             <div class="articles__item">
-                <img src="images/articles/2.jpg" alt="old-watches">
-                <div class="articles__info-container">
+                <img src="/images/articles/2.jpg" alt="master">
+                <div class="articles__text-block">
                     <h5 class="articles__title">
                         ІСТОРІЯ ЛЮКСОВИХ ГОДИННИКІВ. ЧАСТИНА 1
                     </h5>
-                    <div class="articles__text">
+                    <p class="articles__text">
                         Історія люксових годинників зародилася дуже давно, вона веде відлік із часів перших годинників у світі. Тоді годинник був розкішшю, яку могла собі дозволити лише найвища еліта суспільства. Навіть не всім, хто має титул і великі гроші, могли виготовити цей розкішний аксесуар. Власне, з того часу мало що змінилося.
-                    </div>
-                    <div class="articles__activities">
+                    </p>
+                    <div class="articles__active">
                         <button class="articles__btn">
                             читати
                         </button>
-                        <span class="articles__hashtag">#ЕКСКЛЮЗИВ  #IСТОРIЯ</span> 
-                    </div>  
-                </div>    
+                        <span class="articles__hashtag">#ЕКСКЛЮЗИВ  #IСТОРIЯ</span>
+                    </div>
+                    
+                </div>
             </div>
-                
-        
             <div class="articles__item">
-                <img src="images/articles/3.jpg" alt="watches">
-                <div class="articles__info-container">
+                <img src="/images/articles/3.jpg" alt="master">
+                <div class="articles__text-block">
                     <h5 class="articles__title">
                         ВЕЛИКИЙ ТА СМІЛИВИЙ TISSOT PRS 516 CHRONOGRAPH
                     </h5>
-                    <div class="articles__text">
+                    <p class="articles__text">
                         На початку цього року компанія Tissot оновила модель PRS 516 Automatic Chronograph, але не пішла вінтажним шляхом. На противагу колекції Heritage із переконливими рімейками вінтажних моделей, PRS 516 – це сучасний хронограф із зухвалим настроєм, безліччю деталей автоспорту й за чудовою ціною.
-                    </div>
-                    <div class="articles__activities">
-                        <button class="articles__btn">
+                    </p>
+                    <div class="articles__active">
+                        <button class="articles__btn button">
                             читати
                         </button>
                         <span class="articles__hashtag">#ХРОНОГРАФ  #TISSOT  #ОГЛЯДГОДИННИКIВ</span>
-                    </div>   
+                    </div>
+                    
                 </div>
             </div>
-        
-    </section>
-    
+        </div>
+    </section> 
     <section class="partners">
-        <h2 class="title">
-            Наші партнери
-        </h2>
-        <hr>
+        <div class="title-container">
+            <h2 class="title">
+                Наші партнери
+            </h2>
+            <hr>
+        </div>
+        
         <div class="partners__items">
             <img src="images/partners/1.png" alt="partner" class="partners__logo">
             <img src="images/partners/2.png" alt="partner" class="partners__logo">
             <img src="images/partners/3.png" alt="partner" class="partners__logo">
             <img src="images/partners/4.png" alt="partner" class="partners__logo">
         </div>
+        <div class="swiper-partners swiper3">
+            <div class="swiper-wrapper">
+                <img class="partners__logo swiper-slide" src="images/partners/1.png" alt="partner" >
+                <img class="partners__logo swiper-slide" src="images/partners/2.png" alt="partner" >
+                <img class="partners__logo swiper-slide" src="images/partners/3.png" alt="partner" >
+                <img class="partners__logo swiper-slide" src="images/partners/4.png" alt="partner" >
+            </div>
+            
+        </div>
     </section>
+    
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
@@ -498,6 +511,7 @@
             </div>
         </div>
     </footer>
+    
     <section class="footer__copyright">
         <div class="container">
             <div class="footer__copyright-inner">
@@ -505,7 +519,7 @@
                 <a class="user-agreement" href="#">Угода користувача</a>
             </div>  
         </div>    
-    </section> -->
+    </section> 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
