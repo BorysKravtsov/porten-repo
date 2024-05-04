@@ -14,45 +14,35 @@ function toggleNav(hamburger, nav, body) {
   hamburger.innerHTML = hamburger.innerHTML === '☰' ? '✕' : '☰';
 }
 
-function handleHeaderScroll(header, mainContent) {
+function handleHeaderScroll(header, mainContent, nav) {
   const headerOffset = header.offsetTop;
-  window.addEventListener('scroll', function () {
+  window.addEventListener('scroll', function() {
     let currentScrollPosition = window.pageYOffset;
     if (currentScrollPosition > headerOffset) {
       header.classList.add('fixed-header');
       mainContent.style.paddingTop = header.offsetHeight + 'px';
+      nav.style.top = '80px';  
     } else {
       header.classList.remove('fixed-header');
       mainContent.style.paddingTop = '0px';
+      nav.style.top = '124px'; 
     }
   });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav');
   const body = document.body;
   const header = document.querySelector('.header__navbar');
   const mainContent = document.querySelector('.main');
 
-  hamburger.addEventListener('click', function () {
+  hamburger.addEventListener('click', function() {
     toggleNav(hamburger, nav, body);
   });
 
-  handleHeaderScroll(header, mainContent);
+  handleHeaderScroll(header, mainContent, nav);
 });
-
-const container = document.querySelector('.header__navbar');
-const element = document.querySelector('.nav.active');
-
-
-const containerWidth = container.offsetWidth;
-
-
-element.style.width = containerWidth + 'px';
-
-
-
 
 
 
