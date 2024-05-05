@@ -152,11 +152,11 @@ button:hover {
     }
 }
 .fixed-header + .nav.active {
-    top: 80px; /* Высота хедера, когда он фиксирован */
+    top: 80px;
 }
 .nav.active {
     position: fixed;
-    top: 124px; /* Исходное положение, когда хедер не фиксирован */
+    top: 124px; 
     left: 0;
     width: 100vw;
     height: 100vh;

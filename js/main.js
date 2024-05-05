@@ -1,17 +1,26 @@
 function toggleNav(hamburger, nav, body) {
+  if (nav.isAnimating) return;
+  nav.isAnimating = true;
+
   if (nav.classList.contains('active')) {
+    hamburger.classList.remove('rotated'); 
+    hamburger.innerHTML = '☰'; 
     nav.style.animation = 'burger-menu-hide 0.7s forwards';
     nav.addEventListener('animationend', () => {
       nav.classList.remove('active');
       body.style.overflow = 'auto';
+      nav.isAnimating = false;
     }, { once: true });
   } else {
+    hamburger.classList.add('rotated'); 
+    hamburger.innerHTML = '✕'; 
     nav.classList.add('active');
     nav.style.animation = 'burger-menu-show 0.7s forwards';
     body.style.overflow = 'hidden';
+    nav.addEventListener('animationend', () => {
+      nav.isAnimating = false;
+    }, { once: true });
   }
-  hamburger.classList.toggle('rotated');
-  hamburger.innerHTML = hamburger.innerHTML === '☰' ? '✕' : '☰';
 }
 
 function handleHeaderScroll(header, mainContent, nav) {
@@ -21,11 +30,11 @@ function handleHeaderScroll(header, mainContent, nav) {
     if (currentScrollPosition > headerOffset) {
       header.classList.add('fixed-header');
       mainContent.style.paddingTop = header.offsetHeight + 'px';
-      nav.style.top = '80px';  
+      nav.style.top = '80px';
     } else {
       header.classList.remove('fixed-header');
       mainContent.style.paddingTop = '0px';
-      nav.style.top = '124px'; 
+      nav.style.top = '124px';
     }
   });
 }
@@ -43,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   handleHeaderScroll(header, mainContent, nav);
 });
+
+
 
 
 
